@@ -1,0 +1,13 @@
+1. Отобразить данные приведенного ниже вида, обратить внимание на he и she:
+
+select concat( 'We have ', count(CASE WHEN gender = 'm' THEN 1 END), ' boys!') as "Gender information:"  from students union select concat( 'We have ', count(CASE WHEN gender = 'f' THEN 1 END), ' girls!') as "Gender information:" from students;
+
+
+2. Отобразить данные приведенного ниже вида:
+
+select concat('This is ', name, ', he has email ', email) as info from students where gender = 'm' union select concat('This is ', name, ', she has email ', email) as info from students where gender = 'f';
+
+
+3. Создать и заполнить структуру данных для хранения словарей и слов из них, получите результат:
+
+select name, count(word) from vocabulary, word where vocabulary.id = word.vocabulary_id group by vocabulary.name;

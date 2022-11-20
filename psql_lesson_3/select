@@ -1,0 +1,5 @@
+Практика
+Объединить авторов с книгами посредством таблицы связей
+
+
+select name, title from authors inner join authors_books on (authors.id = authors_books.author_id) inner join books  on (books.id = authors_books.book_id);
